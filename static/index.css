@@ -1,0 +1,173 @@
+.navbar {
+    background-color: #3c2648;
+    padding: 10px;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .navbar li {
+    display: inline;
+    font-family: cursive;
+    font-size: 20px;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+  }
+
+  .navbar a:hover {
+    background-color: #3c2648;
+    border-radius: 4px;
+  }
+  #main_heading{
+    color: black;
+    font-family: cursive;
+    font-size: 20px;
+    margin-left: 20%;
+  }
+  #parent_div{
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid grey; */
+  }
+  #data_collection{
+    width: 40%;
+    height: fit-content;
+    margin-left: 15%;
+    float: left;
+    /* border: 2px solid #3c2648; */
+  }
+  #message_label, #key_label{
+    font-family: cursive;
+    font-size: 20px;
+    padding-top: 50px;
+  }
+#message{
+    border: 2px groove black;
+    outline: 3px solid #3c2648;
+    border-radius: 10px;
+    width: 80%;
+    height: 30vh;
+}
+#key{
+    border: 2px groove black;
+    border-radius: 5px;
+    outline: 3px solid #3c2648;
+    width: 40%;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#generate_link{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3c2648;
+    font-family: cursive;
+    color: white;
+    margin-left: 10%;
+    box-shadow: 10px 5px 10px #3c2648;
+
+}
+#inspiration{
+  float: left;
+  padding: auto 0px;
+  font-family: cursive;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  /* border: 1px solid gray; */
+  padding-top: 20vh;
+  width: 45%;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+}
+#result_parent{
+  width: 100%;
+  height: 450px;
+  margin-top: 50vh;
+
+}
+#result_left{
+  margin-top: 50px;
+  margin-left: 15%;
+  width: 50%;
+  height: 400px;
+  float: left;
+  border: 2px groove black;
+  outline: 3px solid #3c2648;
+  border-radius: 10px;
+  overflow-y: auto;
+  position: relative;
+
+}
+#result_right{
+  width: 34%;
+  float: left;
+}
+#delete{
+  margin-top: 250px;
+  margin-left: 20%;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px;
+  background-color: #3c2648;
+  color: white;
+  font-family: cursive;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  box-shadow: 10px 5px 10px #3c2648;
+}
+#copy_icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #3c2648;
+  z-index: 1; /* Ensures icon stays on top */
+}
+#guide{
+  margin-left: 15%;
+  font-family: cursive;
+  font-size: 15px;
+}
+footer{
+  width: 100%;
+  height: 40vh;
+  color: white;
+  font-family: cursive;
+  background-color: #3c2648;
+}
+#contact_us{
+  text-align: center;
+  padding-top: 10px;
+  font-size: 35px;
+}
+#left_contact{
+  width: 40%;
+  margin-left: 5%;
+}
+
+input::placeholder{
+   color:grey;
+   opacity: 0.5;
+   font-family: monospace;
+}
+#decrypt_guide{
+   font-family:cursive;
+   font-size:10px;
+   text-align:center;
+}

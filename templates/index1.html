@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+          <li><a href="#contact_us">Contact Us</a></li>
+          <li><a href="#inspiration">About Us</a></li>
+          <li><a href="#documentation">Documentation</a></li>
+        </ul>
+      </nav>
+      <h1 id="main_heading">Share your secret message to your loved one</h1>
+      <div id="parent_div">
+        <div id="data_collection">
+            <form action="#result_parent" id="form" method="post">
+                <br><br><label for="message" id="message_label"><b>Enter your secret message...💓</b></label><br><br>
+                <textarea name="Message" id="message" spellcheck="false" required placeholder="Enter message here...">{{data}}</textarea><br><br>
+                <br><label for="key" id="key_label"><b>Enter secret key...🔐</b></label><br><br>
+                <input type="text" name="Key" id="key" placeholder="Enter key..." required><br><br><br>
+                <input type="submit" value="Decrypt..." id="generate_link">
+
+            </form>
+        </div>
+        <div id="inspiration">
+            <p id="inspire_content">This website is inspired from Jayanth and Nayani<br>Our main goal is to provide privacy and security<br><center>Jayanth nekosamee...</center></p>
+        </div>
+      </div>
+<div id="result_parent">
+        <div id="result_left">
+          <button id="copy_icon" title="Copy text">📋</button>
+            <p id="decrypt_guide"><b>Enter correct key to decrypt correctly</b></p>
+            <p id="text_to_copy">{{result}}</p>
+        </div>
+        <div id="result_right">
+          <a href="http://127.0.0.1:5000/encrypt" id="delete">Delete</a>
+        </div>
+</div>
+      <br><p id="guide"><b>Copy the link and share this secret link to your loved one<br> and tell them your secret key(very secretly)</b></p>
+<footer>
+  <h1 id="contact_us">Contact Us</h1><br>
+  <div id="left_contact">
+    <p>For any websites or support please contact out secaretory<br><br>vnaveenreddy2702@gmail.com<br><br>+91 82477 36920</p>
+  </div>
+  <!-- <div id="profiles">
+   <p>https://youtube.com/snr%rock%gamers<br><br>https://linkedin.com/telli-naveen<br><br>https://telli-naveen/github.in</p>
+  </div> -->
+</footer>
+<script>
+        document.getElementById("copy_icon").addEventListener("click", function() {
+    const textToCopy = document.getElementById("text_to_copy").innerText;
+
+    // Check for clipboard API support, with fallback for older browsers
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            alert("Text copied to clipboard!");
+        }).catch(err => {
+            console.error("Could not copy text: ", err);
+        });
+    } else {
+        // Fallback method for older browsers
+        const textArea = document.createElement("textarea");
+        textArea.value = textToCopy;
+        textArea.style.position = "fixed"; // Avoids scrolling to the bottom
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            alert("Text copied to clipboard!");
+        } catch (err) {
+            console.error("Could not copy text: ", err);
+        }
+        document.body.removeChild(textArea);
+    }
+});
+
+</script>
+</body>
+</html>
