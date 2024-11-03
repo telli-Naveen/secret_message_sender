@@ -3,7 +3,7 @@ from flask import Flask, redirect, url_for, render_template, request
 app = Flask(__name__)
 
 
-@app.route("https://secret-message-sender.onrender.com/encrypt", methods=["POST", "GET"])
+@app.route("https://secret-message-sender.onrender.com", methods=["POST", "GET"])
 def encrypt():
     if request.method == "POST":
         input_string = request.form['Message']
@@ -26,14 +26,14 @@ def encrypt():
 
             encrypted_string += chr(new_ascii)
 
-        encrypted_string = "https://secret-message-sender.onrender.com/encrypt/" + encrypted_string
+        encrypted_string = "https://secret-message-sender.onrender.com/decrypt/" + encrypted_string
         return render_template('index.html', result=encrypted_string)
 
 
     return render_template("index.html")
 
 
-@app.route("https://secret-message-sender.onrender.com/encrypt/<data>", methods=["POST", "GET"])
+@app.route("https://secret-message-sender.onrender.com/decrypt/<data>", methods=["POST", "GET"])
 def decrypt(data):
     if request.method == "POST":
         encrypted_string = request.form["Message"]
