@@ -36,7 +36,7 @@
         <div id="result_left">
           <button id="copy_icon" title="Copy text">📋</button>
             <p id="decrypt_guide"><b>Enter correct key to decrypt correctly</b></p>
-            <p id="text_to_copy">{{result}}</p>
+            <p id="text_to_copy">{{result|safe}}</p>
         </div>
         <div id="result_right">
           <a href="https://secret-message-sender.onrender.com/encrypt" id="delete">Delete</a>
