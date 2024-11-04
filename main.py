@@ -9,7 +9,7 @@ def encrypt():
     if request.method == "POST":
         input_string = request.form['Message']
         key_string = request.form['Key']
-
+        input_string = input_string.replace("\n","<newline>")
         key_value = sum(ord(char) for char in key_string)
         shift_value = key_value // 100
 
@@ -58,7 +58,8 @@ def decrypt(data):
                 new_ascii = 127 - (32 - new_ascii) % 95
 
             decrypted_string += chr(new_ascii)
-
+        decrypted_string = decrypted_string.replace("<newline>", "<br>")
+        decrypted_string = decrypted_string.replace("l<br>","<br>")
         return render_template('index.html', result=decrypted_string, decrypt_guide='Enter correct key to decrypt correctly')
     return render_template('index1.html', data=data)
 
