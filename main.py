@@ -36,7 +36,7 @@ def encrypt():
 
 @app.route("/decrypt/<data>", methods=["POST", "GET"])
 def decrypt(data):
-    data = urllib.parse.unquote(data)
+    
     if request.method == "POST":
         encrypted_string = request.form["Message"]
         key_string = request.form['Key']
@@ -48,6 +48,7 @@ def decrypt(data):
         if shift_value == 0:
             shift_value = 56
 
+        encrypted_string = urllib.parse.unquote(encrypted_string)
         decrypted_string = ""
         for char in encrypted_string:
             new_ascii = ord(char) - shift_value
