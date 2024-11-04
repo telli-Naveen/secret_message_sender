@@ -1,3 +1,8 @@
+#result_left p{
+  word-wrap: break-word; /* Allows long words to wrap to the next line */
+  overflow-wrap: break-word; /* Ensures long, unbreakable strings wrap as well */
+}
+
 body{
     font-family: cursive;
 }
@@ -24,12 +29,12 @@ body{
   .navbar a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 10px;
     font-weight: bold;
   }
 
   .navbar a:hover {
-    background-color: #3c2648;
+    background-color: grey;
     border-radius: 4px;
   }
   #main_heading{
@@ -243,4 +248,4 @@ input::placeholder{
     margin-right: 5%;
     opacity: 0.5;
   }
-  
+  }
