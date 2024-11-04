@@ -34,7 +34,7 @@ def encrypt():
     return render_template("index.html")
 
 
-@app.route("/decrypt/<data>", methods=["POST", "GET"])
+@app.route("/encrypt/<data>", methods=["POST", "GET"])
 def decrypt(data):
     
     if request.method == "POST":
