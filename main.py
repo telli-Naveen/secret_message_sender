@@ -26,7 +26,7 @@ def encrypt():
                 new_ascii = 32 + (new_ascii - 127) % 95
 
             encrypted_string += chr(new_ascii)
-
+        encrypted_string = urllib.parse.quote(encrypted_string)
         encrypted_string = "https://secret-message-sender.onrender.com/decrypt/" + encrypted_string
         return render_template('index.html', result=encrypted_string)
 
@@ -36,6 +36,7 @@ def encrypt():
 
 @app.route("/decrypt/<data>", methods=["POST", "GET"])
 def decrypt(data):
+    data = urllib.parse.unquote(data)
     if request.method == "POST":
         encrypted_string = request.form["Message"]
         key_string = request.form['Key']
