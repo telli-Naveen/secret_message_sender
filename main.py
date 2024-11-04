@@ -27,7 +27,7 @@ def encrypt():
 
             encrypted_string += chr(new_ascii)
         encrypted_string = urllib.parse.quote(encrypted_string)
-        encrypted_string = "https://secret-message-sender.onrender.com/decrypt/" + encrypted_string
+        encrypted_string = "https://secret-message-sender.onrender.com/encrypt/" + encrypted_string
         return render_template('index.html', result=encrypted_string)
 
 
