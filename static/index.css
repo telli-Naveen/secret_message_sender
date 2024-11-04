@@ -187,8 +187,8 @@ input::placeholder{
     font-size:10px;
     padding: 5px 8px;
   }
-  body{
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  body {
+    font-family: 'Verdana', sans-serif;
   }
   #main_heading{
     color: black;
