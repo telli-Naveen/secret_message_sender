@@ -1,3 +1,6 @@
+body{
+    font-family: cursive;
+}
 .navbar {
     background-color: #3c2648;
     padding: 10px;
@@ -171,3 +174,72 @@ input::placeholder{
    font-size:10px;
    text-align:center;
 }
+@media screen and (max-width:600px){
+  .navbar li{
+    font-size:10px;
+    padding: 5px 8px;
+  }
+  #main_heading{
+    color: black;
+    font-family: cursive;
+    font-size: 15px;
+    /* text-align: center; */
+  }
+  #data_collection{
+    width: 95%;
+    height: fit-content;
+    margin-left: 5%;
+    
+    /* border: 2px solid #3c2648; */
+  }
+  #inspiration{
+    font-family: cursive;
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: 400;
+    /* border: 1px solid gray; */
+    /* padding-top: 20vh; */
+    width: 95%;
+    margin-left: 5%;
+  }
+  body{
+    margin: 10px;
+  }
+  #key{
+    width: 70%;
+    font-size: 15px;
+  }
+  #generate_link{
+    margin-left: 20%;
+  }
+  #result_left{
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 15%;
+    width: 80%;
+    height: 400px;
+  }
+  #result_right{
+      width: 100%;
+      
+  }
+  #delete{
+    margin-top: 20px;
+  }
+  #guide{
+    margin-top: 20px;
+    margin-left: 5%;
+    font-weight: lighter;
+    font-size: 15px;
+  }
+  #contact_us{
+    font-size: 25px;
+  }
+  #left_contact{
+    width: 95%;
+    margin-right: 5%;
+    opacity: 0.5;
+  }
+  body{
+      font-family: 'Times New Roman', Times, serif;
+  }
