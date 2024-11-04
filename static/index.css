@@ -2,7 +2,10 @@
   word-wrap: break-word; /* Allows long words to wrap to the next line */
   overflow-wrap: break-word; /* Ensures long, unbreakable strings wrap as well */
 }
-
+a{
+  text-decoration:none;
+  color: white;
+}
 body{
     font-family: cursive;
 }
