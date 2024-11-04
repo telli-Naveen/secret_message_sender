@@ -186,6 +186,10 @@ input::placeholder{
   .navbar li{
     font-size:10px;
     padding: 5px 8px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #message_label, #key_label{
+    font-family: 'Times New Roman', Times, serif;
   }
   body {
     font-family: 'Times New Roman', Times, serif;
@@ -222,6 +226,7 @@ input::placeholder{
   }
   #generate_link{
     margin-left: 20%;
+    font-family: 'Times New Roman', Times, serif;
   }
   #result_left{
     margin-top: 50px;
@@ -229,26 +234,32 @@ input::placeholder{
     margin-right: 15%;
     width: 80%;
     height: 400px;
+    font-family: 'Times New Roman', Times, serif;
   }
   #result_right{
       width: 100%;
+      font-family: 'Times New Roman', Times, serif;
       
   }
   #delete{
     margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
   }
   #guide{
     margin-top: 20px;
     margin-left: 5%;
     font-weight: lighter;
     font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
   }
   #contact_us{
     font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
   }
   #left_contact{
     width: 95%;
     margin-right: 5%;
     opacity: 0.5;
+    font-family: 'Times New Roman', Times, serif;
   }
   }
