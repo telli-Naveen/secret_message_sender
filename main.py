@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, render_template, request
-import urllib.parse
+import base64
 
 app = Flask(__name__)
 
@@ -26,7 +26,7 @@ def encrypt():
                 new_ascii = 32 + (new_ascii - 127) % 95
 
             encrypted_string += chr(new_ascii)
-        encrypted_string = urllib.parse.quote(encrypted_string)
+        encrypted_string = base64.urlsafe_b64encode(encrypted_string.encode()).decode('utf-8')
         encrypted_string = "https://secret-message-sender.onrender.com/encrypt/" + encrypted_string
         return render_template('index.html', result=encrypted_string)
 
@@ -39,6 +39,7 @@ def decrypt(data):
     
     if request.method == "POST":
         encrypted_string = request.form["Message"]
+        encrypted_string = base64.urlsafe_b64decode(encrypted_string).decode('utf-8')
         key_string = request.form['Key']
 
         key_value = sum(ord(char) for char in key_string)
