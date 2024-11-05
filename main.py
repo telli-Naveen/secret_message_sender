@@ -49,7 +49,7 @@ def decrypt(data):
         if shift_value == 0:
             shift_value = 56
 
-        encrypted_string = urllib.parse.unquote(encrypted_string)
+        
         decrypted_string = ""
         for char in encrypted_string:
             new_ascii = ord(char) - shift_value
